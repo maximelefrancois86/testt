@@ -1,0 +1,275 @@
+<http://www.buildingmaintenancedata.org/onto/bm2o> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.buildingmaintenancedata.org/onto/bm2o> <http://www.w3.org/2002/07/owl#imports> <https://brickschema.org/schema/1.1/Brick> .
+<http://www.buildingmaintenancedata.org/onto/bm2o> <http://www.w3.org/2002/07/owl#imports> <https://spec.industrialontologies.org/ontology/202301/maintenance/MaintenanceReferenceOntology/> .
+<http://www.buildingmaintenancedata.org/onto/bm2o> <http://www.w3.org/2002/07/owl#imports> <https://spec.industrialontologies.org/ontology/202301/maintenance/Metadatamaintenance/> .
+<http://www.buildingmaintenancedata.org/onto/bm2o> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Joel Mba Kouhoue, Alexis Lesage, Arnaud Doniec, Jerry Lonlac, Stéphane Lecoeuche"@en .
+<http://www.buildingmaintenancedata.org/onto/bm2o> <http://www.w3.org/2000/01/rdf-schema#label> "bm2o (Building Maintenance Operation Ontology)"@en .
+<http://www.buildingmaintenancedata.org/onto/bm2o> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#hasAdress
+<http://www.buildingmaintenancedata.org/onto/bm2o#hasAdress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#hasAdress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://brickschema.org/schema/1.1/Brick#Location> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#hasAdress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.buildingmaintenancedata.org/onto/bm2o#Address> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#hasFunction
+<http://www.buildingmaintenancedata.org/onto/bm2o#hasFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#hasFunction> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.buildingmaintenancedata.org/onto/bm2o#isRequiredFunctionOf> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#hasFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://brickschema.org/schema/1.1/Brick#Equipment> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#hasFunction> <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/RequiredFunction> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#isAddressOf
+<http://www.buildingmaintenancedata.org/onto/bm2o#isAddressOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isAddressOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingmaintenancedata.org/onto/bm2o#Address> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isAddressOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://brickschema.org/schema/1.1/Brick#Location> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedAgreementOf
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedAgreementOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedAgreementOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.buildingmaintenancedata.org/onto/bm2o#relatedAgreement> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedAgreementOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/core/Core/Agreement> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedAgreementOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCommercialServiceOf
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCommercialServiceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCommercialServiceOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.buildingmaintenancedata.org/onto/bm2o#relatedCommercialService> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCommercialServiceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/core/Core/CommercialService> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCommercialServiceOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/core/Core/Agreement> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCustomerOf
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCustomerOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCustomerOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.buildingmaintenancedata.org/onto/bm2o#relatedCustomer> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCustomerOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/core/Core/CustomerRole> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCustomerOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/core/Core/Agreement> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedMaintenanceProcessOf
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedMaintenanceProcessOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedMaintenanceProcessOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.buildingmaintenancedata.org/onto/bm2o#relatedMaintenanceProcess> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedMaintenanceProcessOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedMaintenanceProcessOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceLevelAgreementOf
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceLevelAgreementOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceLevelAgreementOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceLevelAgreement> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceLevelAgreementOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceLevelAgreementOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/core/Core/Agreement> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceProviderOf
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceProviderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceProviderOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceProvider> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceProviderOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceProviderOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/core/Core/Agreement> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#isRequiredFunctionOf
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRequiredFunctionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRequiredFunctionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/RequiredFunction> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#isRequiredFunctionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://brickschema.org/schema/1.1/Brick#Equipment> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#participatesTo
+<http://www.buildingmaintenancedata.org/onto/bm2o#participatesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#participatesTo> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.buildingmaintenancedata.org/onto/bm2o#relatedEquipment> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#participatesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://brickschema.org/schema/1.1/Brick#Equipment> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#participatesTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#relatedAgreement
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedAgreement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedAgreement> <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/core/Core/Agreement> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#relatedCommercialService
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedCommercialService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedCommercialService> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/core/Core/Agreement> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedCommercialService> <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/core/Core/CommercialService> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#relatedCustomer
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedCustomer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedCustomer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/core/Core/Agreement> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedCustomer> <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/core/Core/Customer> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#relatedEquipment
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedEquipment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedEquipment> <http://www.w3.org/2000/01/rdf-schema#range> <https://brickschema.org/schema/1.1/Brick#Equipment> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#relatedMaintenanceProcess
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedMaintenanceProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedMaintenanceProcess> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedMaintenanceProcess> <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceLevelAgreement
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceLevelAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceLevelAgreement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/core/Core/Agreement> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceLevelAgreement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceProvider
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceProvider> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/core/Core/Agreement> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceProvider> <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+# 
+# https://brickschema.org/schema/1.1/Brick#hasLocation
+<https://brickschema.org/schema/1.1/Brick#hasLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://brickschema.org/schema/1.1/Brick#Equipment> .
+# 
+# https://brickschema.org/schema/1.1/Brick#isLocationOf
+<https://brickschema.org/schema/1.1/Brick#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://brickschema.org/schema/1.1/Brick#Equipment> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#criticalLevel
+<http://www.buildingmaintenancedata.org/onto/bm2o#criticalLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#criticalLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#criticalLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#customerCode
+<http://www.buildingmaintenancedata.org/onto/bm2o#customerCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#customerCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#customerCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#description
+<http://www.buildingmaintenancedata.org/onto/bm2o#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDuration
+<http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDurationUnit
+<http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDurationUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDurationUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDurationUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#label
+<http://www.buildingmaintenancedata.org/onto/bm2o#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#label> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/core/Core/Customer> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#label> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#label> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToIntervention
+<http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToIntervention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToIntervention> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToIntervention> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToInterventionUnit
+<http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToInterventionUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToInterventionUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToInterventionUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecovery
+<http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecovery> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecovery> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecoveryUnit
+<http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecoveryUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecoveryUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecoveryUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#serviceProviderCode
+<http://www.buildingmaintenancedata.org/onto/bm2o#serviceProviderCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#serviceProviderCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#serviceProviderCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#technicalReason
+<http://www.buildingmaintenancedata.org/onto/bm2o#technicalReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#technicalReason> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#technicalReason> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#topic
+<http://www.buildingmaintenancedata.org/onto/bm2o#topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#topic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#topic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#workType
+<http://www.buildingmaintenancedata.org/onto/bm2o#workType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#workType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#workType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#Address
+<http://www.buildingmaintenancedata.org/onto/bm2o#Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#Adjust
+<http://www.buildingmaintenancedata.org/onto/bm2o#Adjust> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#Adjust> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#Collectivity
+<http://www.buildingmaintenancedata.org/onto/bm2o#Collectivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#Collectivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/Customer> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#ElevatorServiceProvider
+<http://www.buildingmaintenancedata.org/onto/bm2o#ElevatorServiceProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#ElevatorServiceProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#HeatingServiceProvider
+<http://www.buildingmaintenancedata.org/onto/bm2o#HeatingServiceProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#HeatingServiceProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#Inspect
+<http://www.buildingmaintenancedata.org/onto/bm2o#Inspect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#Inspect> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#LandscapingServiceProvider
+<http://www.buildingmaintenancedata.org/onto/bm2o#LandscapingServiceProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#LandscapingServiceProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#MultiserviceProvider
+<http://www.buildingmaintenancedata.org/onto/bm2o#MultiserviceProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#MultiserviceProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#PaintingServiceProvider
+<http://www.buildingmaintenancedata.org/onto/bm2o#PaintingServiceProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#PaintingServiceProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#PlumbingServiceProvider
+<http://www.buildingmaintenancedata.org/onto/bm2o#PlumbingServiceProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#PlumbingServiceProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#PropertyManager
+<http://www.buildingmaintenancedata.org/onto/bm2o#PropertyManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#PropertyManager> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/Customer> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#Repair
+<http://www.buildingmaintenancedata.org/onto/bm2o#Repair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#Repair> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#Replace
+<http://www.buildingmaintenancedata.org/onto/bm2o#Replace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#Replace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement
+<http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#Tertiary
+<http://www.buildingmaintenancedata.org/onto/bm2o#Tertiary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#Tertiary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/Customer> .
+# 
+# http://www.buildingmaintenancedata.org/onto/bm2o#VentillationServiceProvider
+<http://www.buildingmaintenancedata.org/onto/bm2o#VentillationServiceProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.buildingmaintenancedata.org/onto/bm2o#VentillationServiceProvider> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+# 
+# https://brickschema.org/schema/1.1/Brick#Equipment
+<https://brickschema.org/schema/1.1/Brick#Equipment> <http://www.w3.org/2002/07/owl#equivalentClass> <https://spec.industrialontologies.org/ontology/core/Core/MaintainableMaterialItem> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

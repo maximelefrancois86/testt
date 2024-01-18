@@ -1,0 +1,320 @@
+@prefix : <http://www.buildingmaintenancedata.org/onto/bm2o#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.buildingmaintenancedata.org/onto/bm2o#> .
+
+<http://www.buildingmaintenancedata.org/onto/bm2o> rdf:type owl:Ontology ;
+                                                    owl:imports <https://brickschema.org/schema/1.1/Brick> ,
+                                                                <https://spec.industrialontologies.org/ontology/202301/maintenance/MaintenanceReferenceOntology/> ,
+                                                                <https://spec.industrialontologies.org/ontology/202301/maintenance/Metadatamaintenance/> ;
+                                                    rdfs:isDefinedBy "Joel Mba Kouhoue, Alexis Lesage, Arnaud Doniec, Jerry Lonlac, Stéphane Lecoeuche"@en ;
+                                                    rdfs:label "bm2o (Building Maintenance Operation Ontology)"@en ;
+                                                    owl:versionInfo "1.0"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#hasAdress
+:hasAdress rdf:type owl:ObjectProperty ;
+           rdfs:domain <https://brickschema.org/schema/1.1/Brick#Location> ;
+           rdfs:range :Address .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#hasFunction
+:hasFunction rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isRequiredFunctionOf ;
+             rdfs:domain <https://brickschema.org/schema/1.1/Brick#Equipment> ;
+             rdfs:range <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/RequiredFunction> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#isAddressOf
+:isAddressOf rdf:type owl:ObjectProperty ;
+             rdfs:domain :Address ;
+             rdfs:range <https://brickschema.org/schema/1.1/Brick#Location> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedAgreementOf
+:isRelatedAgreementOf rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :relatedAgreement ;
+                      rdfs:domain <https://spec.industrialontologies.org/ontology/core/Core/Agreement> ;
+                      rdfs:range <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCommercialServiceOf
+:isRelatedCommercialServiceOf rdf:type owl:ObjectProperty ;
+                              owl:inverseOf :relatedCommercialService ;
+                              rdfs:domain <https://spec.industrialontologies.org/ontology/core/Core/CommercialService> ;
+                              rdfs:range <https://spec.industrialontologies.org/ontology/core/Core/Agreement> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCustomerOf
+:isRelatedCustomerOf rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :relatedCustomer ;
+                     rdfs:domain <https://spec.industrialontologies.org/ontology/core/Core/CustomerRole> ;
+                     rdfs:range <https://spec.industrialontologies.org/ontology/core/Core/Agreement> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedMaintenanceProcessOf
+:isRelatedMaintenanceProcessOf rdf:type owl:ObjectProperty ;
+                               owl:inverseOf :relatedMaintenanceProcess ;
+                               rdfs:domain <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess> ;
+                               rdfs:range <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceLevelAgreementOf
+:isRelatedServiceLevelAgreementOf rdf:type owl:ObjectProperty ;
+                                  owl:inverseOf :relatedServiceLevelAgreement ;
+                                  rdfs:domain :ServiceLevelAgreement ;
+                                  rdfs:range <https://spec.industrialontologies.org/ontology/core/Core/Agreement> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceProviderOf
+:isRelatedServiceProviderOf rdf:type owl:ObjectProperty ;
+                            owl:inverseOf :relatedServiceProvider ;
+                            rdfs:domain <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> ;
+                            rdfs:range <https://spec.industrialontologies.org/ontology/core/Core/Agreement> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#isRequiredFunctionOf
+:isRequiredFunctionOf rdf:type owl:ObjectProperty ;
+                      rdfs:domain <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/RequiredFunction> ;
+                      rdfs:range <https://brickschema.org/schema/1.1/Brick#Equipment> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#participatesTo
+:participatesTo rdf:type owl:ObjectProperty ;
+                owl:inverseOf :relatedEquipment ;
+                rdfs:domain <https://brickschema.org/schema/1.1/Brick#Equipment> ;
+                rdfs:range <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#relatedAgreement
+:relatedAgreement rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> ;
+                  rdfs:range <https://spec.industrialontologies.org/ontology/core/Core/Agreement> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#relatedCommercialService
+:relatedCommercialService rdf:type owl:ObjectProperty ;
+                          rdfs:domain <https://spec.industrialontologies.org/ontology/core/Core/Agreement> ;
+                          rdfs:range <https://spec.industrialontologies.org/ontology/core/Core/CommercialService> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#relatedCustomer
+:relatedCustomer rdf:type owl:ObjectProperty ;
+                 rdfs:domain <https://spec.industrialontologies.org/ontology/core/Core/Agreement> ;
+                 rdfs:range <https://spec.industrialontologies.org/ontology/core/Core/Customer> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#relatedEquipment
+:relatedEquipment rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess> ;
+                  rdfs:range <https://brickschema.org/schema/1.1/Brick#Equipment> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#relatedMaintenanceProcess
+:relatedMaintenanceProcess rdf:type owl:ObjectProperty ;
+                           rdfs:domain <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> ;
+                           rdfs:range <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceLevelAgreement
+:relatedServiceLevelAgreement rdf:type owl:ObjectProperty ;
+                              rdfs:domain <https://spec.industrialontologies.org/ontology/core/Core/Agreement> ;
+                              rdfs:range :ServiceLevelAgreement .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceProvider
+:relatedServiceProvider rdf:type owl:ObjectProperty ;
+                        rdfs:domain <https://spec.industrialontologies.org/ontology/core/Core/Agreement> ;
+                        rdfs:range <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+
+
+###  https://brickschema.org/schema/1.1/Brick#hasLocation
+<https://brickschema.org/schema/1.1/Brick#hasLocation> rdfs:domain <https://brickschema.org/schema/1.1/Brick#Equipment> .
+
+
+###  https://brickschema.org/schema/1.1/Brick#isLocationOf
+<https://brickschema.org/schema/1.1/Brick#isLocationOf> rdfs:range <https://brickschema.org/schema/1.1/Brick#Equipment> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#criticalLevel
+:criticalLevel rdf:type owl:DatatypeProperty ;
+               rdfs:domain <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> ;
+               rdfs:range xsd:integer .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#customerCode
+:customerCode rdf:type owl:DatatypeProperty ;
+              rdfs:domain :ServiceLevelAgreement ;
+              rdfs:range xsd:string .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:domain <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> ;
+             rdfs:range xsd:string .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDuration
+:estimatedInterventionDuration rdf:type owl:DatatypeProperty ;
+                               rdfs:domain :ServiceLevelAgreement ;
+                               rdfs:range xsd:double .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDurationUnit
+:estimatedInterventionDurationUnit rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain :ServiceLevelAgreement ;
+                                   rdfs:range xsd:string .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#label
+:label rdf:type owl:DatatypeProperty ;
+       rdfs:domain <https://spec.industrialontologies.org/ontology/core/Core/Customer> ,
+                   <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> ;
+       rdfs:range xsd:string .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToIntervention
+:maxTimeToIntervention rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :ServiceLevelAgreement ;
+                       rdfs:range xsd:double .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToInterventionUnit
+:maxTimeToInterventionUnit rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :ServiceLevelAgreement ;
+                           rdfs:range xsd:string .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecovery
+:maxTimeToRecovery rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :ServiceLevelAgreement ;
+                   rdfs:range xsd:double .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecoveryUnit
+:maxTimeToRecoveryUnit rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :ServiceLevelAgreement ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#serviceProviderCode
+:serviceProviderCode rdf:type owl:DatatypeProperty ;
+                     rdfs:domain <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#technicalReason
+:technicalReason rdf:type owl:DatatypeProperty ;
+                 rdfs:domain <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#topic
+:topic rdf:type owl:DatatypeProperty ;
+       rdfs:domain <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> ;
+       rdfs:range xsd:string .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#workType
+:workType rdf:type owl:DatatypeProperty ;
+          rdfs:domain <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord> ;
+          rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#Address
+:Address rdf:type owl:Class .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#Adjust
+:Adjust rdf:type owl:Class ;
+        rdfs:subClassOf <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#Collectivity
+:Collectivity rdf:type owl:Class ;
+              rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/Customer> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#ElevatorServiceProvider
+:ElevatorServiceProvider rdf:type owl:Class ;
+                         rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#HeatingServiceProvider
+:HeatingServiceProvider rdf:type owl:Class ;
+                        rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#Inspect
+:Inspect rdf:type owl:Class ;
+         rdfs:subClassOf <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#LandscapingServiceProvider
+:LandscapingServiceProvider rdf:type owl:Class ;
+                            rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#MultiserviceProvider
+:MultiserviceProvider rdf:type owl:Class ;
+                      rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#PaintingServiceProvider
+:PaintingServiceProvider rdf:type owl:Class ;
+                         rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#PlumbingServiceProvider
+:PlumbingServiceProvider rdf:type owl:Class ;
+                         rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#PropertyManager
+:PropertyManager rdf:type owl:Class ;
+                 rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/Customer> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#Repair
+:Repair rdf:type owl:Class ;
+        rdfs:subClassOf <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#Replace
+:Replace rdf:type owl:Class ;
+         rdfs:subClassOf <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement
+:ServiceLevelAgreement rdf:type owl:Class .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#Tertiary
+:Tertiary rdf:type owl:Class ;
+          rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/Customer> .
+
+
+###  http://www.buildingmaintenancedata.org/onto/bm2o#VentillationServiceProvider
+:VentillationServiceProvider rdf:type owl:Class ;
+                             rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider> .
+
+
+###  https://brickschema.org/schema/1.1/Brick#Equipment
+<https://brickschema.org/schema/1.1/Brick#Equipment> owl:equivalentClass <https://spec.industrialontologies.org/ontology/core/Core/MaintainableMaterialItem> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
