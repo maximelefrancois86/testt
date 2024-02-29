@@ -16,5 +16,5 @@ We welcome contributions from the community! If you would like to contribute to 
 5. Push your changes to your GitHub fork (`git push origin new-feature`).
 6. Create a pull request to the main branch of this repository.
 
-7. - ## License
+ ## License
 This project is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
