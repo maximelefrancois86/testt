@@ -9,6 +9,7 @@
 @prefix iof-core: <https://spec.industrialontologies.org/ontology/core/Core/> .
 @prefix iof-mo: <https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/> .
 @prefix iof-maintenance-mod: <https://spec.industrialontologies.org/ontology/maintenance/Metadatamaintenance/> .
+@prefix cc: <http://creativecommons.org/ns#>.
 @base <https://w3id.org/def/bm2o#> .
 
 <https://w3id.org/def/bm2o#> a owl:Ontology ;
@@ -24,6 +25,7 @@
   dct:contributor "Stéphane Lecoeuche" ;
   dct:contributor "Maxime Lefrançois" ;
   owl:versionInfo "1.0"@en ;
+  cc:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
   vann:preferredNamespacePrefix "bm2o" ;
   vann:preferredNamespaceUri "https://w3id.org/def/bm2o#"^^xsd:anyURI .
 
