@@ -7,7 +7,7 @@ This project aims to develop a domain ontology for the representation of buildin
 - https://brickschema.org/
 - https://intent.tech/
 
-- ## How to Contribute
+ ## How to Contribute
 We welcome contributions from the community! If you would like to contribute to the development of the BM2O ontology, please follow these steps:
 1. Check the open issues to see if there are any tasks you can contribute to.
 2. Fork the project on GitHub.
