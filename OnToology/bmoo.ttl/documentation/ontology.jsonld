@@ -1,13 +1,45 @@
 [ {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o",
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://brickschema.org/schema/1.1/Brick#Equipment",
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/Core/MaintainableMaterialItem"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/bm2o#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@language" : "en",
-    "@value" : "Joel Mba Kouhoue, Alexis Lesage, Arnaud Doniec, Jerry Lonlac, Stéphane Lecoeuche"
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Alexis Lesage"
+  }, {
+    "@value" : "Arnaud Doniec"
+  }, {
+    "@value" : "Jerry Lonlac"
+  }, {
+    "@value" : "Maxime Lefrançois"
+  }, {
+    "@value" : "Stéphane Lecoeuche"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Joel Mba Kouhoue"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
     "@value" : "bm2o (Building Maintenance Operation Ontology)"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "bm2o"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://w3id.org/def/bm2o#"
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
     "@id" : "https://brickschema.org/schema/1.1/Brick"
@@ -21,422 +53,791 @@
     "@value" : "1.0"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#Address",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#Adjust",
+  "@id" : "https://w3id.org/def/bm2o#Address",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Descriptin of a physical address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Address"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/bm2o#Adjust",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Maintenance activity that consists in setting a variable control mechanism to the correct specification to retain or restore the function of a maintainable item."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Adjust"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#Collectivity",
+  "@id" : "https://w3id.org/def/bm2o#Collectivity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Organization of legal organizations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Collectivity"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/Customer"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#ElevatorServiceProvider",
+  "@id" : "https://w3id.org/def/bm2o#ElevatorServiceProvider",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Person or organization which provides services related to elevators."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Elevator Service Provider"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#HeatingServiceProvider",
+  "@id" : "https://w3id.org/def/bm2o#HeatingServiceProvider",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Person or organization which provides services related to heating."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Heating Service Provider"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#Inspect",
+  "@id" : "https://w3id.org/def/bm2o#Inspect",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Maintenance activity that consists in inspecting some component of a maintainable item to retain its function."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Inspect"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#LandscapingServiceProvider",
+  "@id" : "https://w3id.org/def/bm2o#LandscapingServiceProvider",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Person or organization which provides services related to landscaping."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Landscaping Service Provider"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#MultiserviceProvider",
+  "@id" : "https://w3id.org/def/bm2o#MultiserviceProvider",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Person or organization which provides multiple building-related services."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Multiservice Provider"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#PaintingServiceProvider",
+  "@id" : "https://w3id.org/def/bm2o#PaintingServiceProvider",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Person or organization which provides services related to painting."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Painting Service Provider"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#PlumbingServiceProvider",
+  "@id" : "https://w3id.org/def/bm2o#PlumbingServiceProvider",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Person or organization which provides services related to plumbing."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Plumbing Service Provider"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#PropertyManager",
+  "@id" : "https://w3id.org/def/bm2o#PropertyManager",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Person or organization hired to oversee the day-to-day operations of a unit of real estate."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Property Manager"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/Customer"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#Repair",
+  "@id" : "https://w3id.org/def/bm2o#Repair",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Maintenance activity that consists in repairing some component of a maintainable item to retain or restore its function."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Repair"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#Replace",
+  "@id" : "https://w3id.org/def/bm2o#Replace",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Maintenance activity that consists in replacing some component of a maintainable item to retain or restore its function."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Replace"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#Tertiary",
+  "@id" : "https://w3id.org/def/bm2o#ServiceLevelAgreement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Contract between a service provider and its customers that documents what services the provider will furnish and defines the service standards the provider is obligated to meet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Service Level Agreement"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/bm2o#Tertiary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Tertiary industries or companies are involved in providing services, rather than the production of raw materials or manufacturing. (Source: ldoce)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tertiary"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/Customer"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#VentillationServiceProvider",
+  "@id" : "https://w3id.org/def/bm2o#VentilationServiceProvider",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Person or organization which provides services related to ventilation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ventilation Service Provider"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#criticalLevel",
+  "@id" : "https://w3id.org/def/bm2o#criticalLevel",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The critical level of the maintenance process."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "critical level"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#customerCode",
+  "@id" : "https://w3id.org/def/bm2o#customerCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The customer code of the service level agreement."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"
+    "@id" : "https://w3id.org/def/bm2o#ServiceLevelAgreement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "customer code"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#description",
+  "@id" : "https://w3id.org/def/bm2o#description",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The description of the maintenance process."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "description"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDuration",
+  "@id" : "https://w3id.org/def/bm2o#estimatedInterventionDuration",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The estimated time to intervention of any maintenance process covered by the service level agreement."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"
+    "@id" : "https://w3id.org/def/bm2o#ServiceLevelAgreement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "estimated intervention duration"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDurationUnit",
+  "@id" : "https://w3id.org/def/bm2o#estimatedInterventionDurationUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The unit in which is defined the estimated intervention duration (a double) of any maintenance process covered by the service level agreement."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"
+    "@id" : "https://w3id.org/def/bm2o#ServiceLevelAgreement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "estimated intervention duration unit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#hasAdress",
+  "@id" : "https://w3id.org/def/bm2o#hasAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Physical address of a location."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://brickschema.org/schema/1.1/Brick#Location"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has address"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#Address"
+    "@id" : "https://w3id.org/def/bm2o#Address"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#hasFunction",
+  "@id" : "https://w3id.org/def/bm2o#hasFunction",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Required function of an equipment."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://brickschema.org/schema/1.1/Brick#Equipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has function"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/RequiredFunction"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#isRequiredFunctionOf"
+    "@id" : "https://w3id.org/def/bm2o#isRequiredFunctionOf"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#isAddressOf",
+  "@id" : "https://w3id.org/def/bm2o#isAddressOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Location having this physical address."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#Address"
+    "@id" : "https://w3id.org/def/bm2o#Address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is address of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://brickschema.org/schema/1.1/Brick#Location"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedAgreementOf",
+  "@id" : "https://w3id.org/def/bm2o#isRelatedAgreementOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links an agreement to some maintenance process is is related to."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/Agreement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is related agreement of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#relatedAgreement"
+    "@id" : "https://w3id.org/def/bm2o#relatedAgreement"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCommercialServiceOf",
+  "@id" : "https://w3id.org/def/bm2o#isRelatedCommercialServiceOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a commercial service to some agreement is is related to."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/CommercialService"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is related commercial service of"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/Agreement"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#relatedCommercialService"
+    "@id" : "https://w3id.org/def/bm2o#relatedCommercialService"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCustomerOf",
+  "@id" : "https://w3id.org/def/bm2o#isRelatedCustomerOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a customer to some agreement is has signed."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/CustomerRole"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is related customer of"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/Agreement"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#relatedCustomer"
+    "@id" : "https://w3id.org/def/bm2o#relatedCustomer"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedMaintenanceProcessOf",
+  "@id" : "https://w3id.org/def/bm2o#isRelatedMaintenanceProcessOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a maintenance process to its description."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is related maintenance process of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#relatedMaintenanceProcess"
+    "@id" : "https://w3id.org/def/bm2o#relatedMaintenanceProcess"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceLevelAgreementOf",
+  "@id" : "https://w3id.org/def/bm2o#isRelatedServiceLevelAgreementOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a service level agreement to the agreement it is related to."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"
+    "@id" : "https://w3id.org/def/bm2o#ServiceLevelAgreement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is related service level agreement of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/Agreement"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceLevelAgreement"
+    "@id" : "https://w3id.org/def/bm2o#relatedServiceLevelAgreement"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceProviderOf",
+  "@id" : "https://w3id.org/def/bm2o#isRelatedServiceProviderOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is related service provider of"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/Agreement"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceProvider"
+    "@id" : "https://w3id.org/def/bm2o#relatedServiceProvider"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#isRequiredFunctionOf",
+  "@id" : "https://w3id.org/def/bm2o#isRequiredFunctionOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/RequiredFunction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is required function of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://brickschema.org/schema/1.1/Brick#Equipment"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#label",
+  "@id" : "https://w3id.org/def/bm2o#label",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The label of the service provider."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/Customer"
   }, {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "label"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToIntervention",
+  "@id" : "https://w3id.org/def/bm2o#maxTimeToIntervention",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The maximum time to intervention of any maintenance process covered by the service level agreement."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"
+    "@id" : "https://w3id.org/def/bm2o#ServiceLevelAgreement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "max time to intervention"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToInterventionUnit",
+  "@id" : "https://w3id.org/def/bm2o#maxTimeToInterventionUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The unit in which is defined the maximum time to intervention (a double) of any maintenance process covered by the service level agreement."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"
+    "@id" : "https://w3id.org/def/bm2o#ServiceLevelAgreement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "max time to intervention unit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecovery",
+  "@id" : "https://w3id.org/def/bm2o#maxTimeToRecovery",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The maximum time to recovery of any maintenance process covered by the service level agreement."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"
+    "@id" : "https://w3id.org/def/bm2o#ServiceLevelAgreement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "max time to recovery"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecoveryUnit",
+  "@id" : "https://w3id.org/def/bm2o#maxTimeToRecoveryUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The unit in which is defined the maximum time to recovery (a double) of any maintenance process covered by the service level agreement."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"
+    "@id" : "https://w3id.org/def/bm2o#ServiceLevelAgreement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "max time to recovery unit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#participatesTo",
+  "@id" : "https://w3id.org/def/bm2o#participatesTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://brickschema.org/schema/1.1/Brick#Equipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "participates to"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#relatedEquipment"
+    "@id" : "https://w3id.org/def/bm2o#relatedEquipment"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#relatedAgreement",
+  "@id" : "https://w3id.org/def/bm2o#relatedAgreement",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related agreement"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/Agreement"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#relatedCommercialService",
+  "@id" : "https://w3id.org/def/bm2o#relatedCommercialService",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/Agreement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related commercial service"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/CommercialService"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#relatedCustomer",
+  "@id" : "https://w3id.org/def/bm2o#relatedCustomer",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/Agreement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related customer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/Customer"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#relatedEquipment",
+  "@id" : "https://w3id.org/def/bm2o#relatedEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related equipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://brickschema.org/schema/1.1/Brick#Equipment"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#relatedMaintenanceProcess",
+  "@id" : "https://w3id.org/def/bm2o#relatedMaintenanceProcess",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related maintenance process"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceLevelAgreement",
+  "@id" : "https://w3id.org/def/bm2o#relatedServiceLevelAgreement",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/Agreement"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related service level agreement"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"
+    "@id" : "https://w3id.org/def/bm2o#ServiceLevelAgreement"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceProvider",
+  "@id" : "https://w3id.org/def/bm2o#relatedServiceProvider",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/Agreement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related service provider"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#serviceProviderCode",
+  "@id" : "https://w3id.org/def/bm2o#serviceProviderCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The service provider code of a maintenance process."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "service provider code"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#technicalReason",
+  "@id" : "https://w3id.org/def/bm2o#technicalReason",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The technical reason of a maintenance process."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "technical reason"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#topic",
+  "@id" : "https://w3id.org/def/bm2o#topic",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The topic of a maintenance process."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "topic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://www.buildingmaintenancedata.org/onto/bm2o#workType",
+  "@id" : "https://w3id.org/def/bm2o#workType",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The type of work needed for a maintenance process."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "work type"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://brickschema.org/schema/1.1/Brick#Equipment",
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://spec.industrialontologies.org/ontology/core/Core/MaintainableMaterialItem"
-  } ]
-}, {
-  "@id" : "https://brickschema.org/schema/1.1/Brick#hasLocation",
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://brickschema.org/schema/1.1/Brick#Equipment"
-  } ]
-}, {
-  "@id" : "https://brickschema.org/schema/1.1/Brick#isLocationOf",
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://brickschema.org/schema/1.1/Brick#Equipment"
   } ]
 } ]
