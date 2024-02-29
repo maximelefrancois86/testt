@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.buildingmaintenancedata.org/onto/bm2o#"
-     xml:base="http://www.buildingmaintenancedata.org/onto/bm2o"
+<rdf:RDF xmlns="https://w3id.org/def/bm2o#"
+     xml:base="https://w3id.org/def/bm2o"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -8,18 +9,53 @@
      xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org#"
      xmlns:terms1="http://purl.org/dc/terms#"
      xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
-    <owl:Ontology rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o">
+    <owl:Ontology rdf:about="https://w3id.org/def/bm2o#">
         <owl:imports rdf:resource="https://brickschema.org/schema/1.1/Brick"/>
         <owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202301/maintenance/MaintenanceReferenceOntology/"/>
         <owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202301/maintenance/Metadatamaintenance/"/>
-        <rdfs:isDefinedBy xml:lang="en">Joel Mba Kouhoue, Alexis Lesage, Arnaud Doniec, Jerry Lonlac, Stéphane Lecoeuche</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">bm2o (Building Maintenance Operation Ontology)</rdfs:label>
+        <terms:contributor>Alexis Lesage</terms:contributor>
+        <terms:contributor>Arnaud Doniec</terms:contributor>
+        <terms:contributor>Jerry Lonlac</terms:contributor>
+        <terms:contributor>Maxime Lefrançois</terms:contributor>
+        <terms:contributor>Stéphane Lecoeuche</terms:contributor>
+        <terms:creator>Joel Mba Kouhoue</terms:creator>
+        <terms:description xml:lang="en"></terms:description>
+        <terms:title xml:lang="en">bm2o (Building Maintenance Operation Ontology)</terms:title>
+        <vann:preferredNamespacePrefix>bm2o</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/def/bm2o#</vann:preferredNamespaceUri>
         <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
 
 
@@ -35,209 +71,227 @@
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#hasAdress -->
+    <!-- https://w3id.org/def/bm2o#hasAddress -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#hasAdress">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#hasAddress">
         <rdfs:domain rdf:resource="https://brickschema.org/schema/1.1/Brick#Location"/>
-        <rdfs:range rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#Address"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/bm2o#Address"/>
+        <rdfs:comment xml:lang="en">Physical address of a location.</rdfs:comment>
+        <rdfs:label xml:lang="en">has address</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#hasFunction -->
+    <!-- https://w3id.org/def/bm2o#hasFunction -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#hasFunction">
-        <owl:inverseOf rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#isRequiredFunctionOf"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#hasFunction">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/bm2o#isRequiredFunctionOf"/>
         <rdfs:domain rdf:resource="https://brickschema.org/schema/1.1/Brick#Equipment"/>
         <rdfs:range rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/RequiredFunction"/>
+        <rdfs:comment xml:lang="en">Required function of an equipment.</rdfs:comment>
+        <rdfs:label xml:lang="en">has function</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#isAddressOf -->
+    <!-- https://w3id.org/def/bm2o#isAddressOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#isAddressOf">
-        <rdfs:domain rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#Address"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#isAddressOf">
+        <rdfs:domain rdf:resource="https://w3id.org/def/bm2o#Address"/>
         <rdfs:range rdf:resource="https://brickschema.org/schema/1.1/Brick#Location"/>
+        <rdfs:comment xml:lang="en">Location having this physical address.</rdfs:comment>
+        <rdfs:label xml:lang="en">is address of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedAgreementOf -->
+    <!-- https://w3id.org/def/bm2o#isRelatedAgreementOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedAgreementOf">
-        <owl:inverseOf rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#relatedAgreement"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#isRelatedAgreementOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/bm2o#relatedAgreement"/>
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Agreement"/>
         <rdfs:range rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"/>
+        <rdfs:comment xml:lang="en">Links an agreement to some maintenance process is is related to.</rdfs:comment>
+        <rdfs:label xml:lang="en">is related agreement of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCommercialServiceOf -->
+    <!-- https://w3id.org/def/bm2o#isRelatedCommercialServiceOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCommercialServiceOf">
-        <owl:inverseOf rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#relatedCommercialService"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#isRelatedCommercialServiceOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/bm2o#relatedCommercialService"/>
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/CommercialService"/>
         <rdfs:range rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Agreement"/>
+        <rdfs:comment xml:lang="en">Links a commercial service to some agreement is is related to.</rdfs:comment>
+        <rdfs:label xml:lang="en">is related commercial service of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCustomerOf -->
+    <!-- https://w3id.org/def/bm2o#isRelatedCustomerOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedCustomerOf">
-        <owl:inverseOf rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#relatedCustomer"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#isRelatedCustomerOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/bm2o#relatedCustomer"/>
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/CustomerRole"/>
         <rdfs:range rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Agreement"/>
+        <rdfs:comment xml:lang="en">Links a customer to some agreement is has signed.</rdfs:comment>
+        <rdfs:label xml:lang="en">is related customer of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedMaintenanceProcessOf -->
+    <!-- https://w3id.org/def/bm2o#isRelatedMaintenanceProcessOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedMaintenanceProcessOf">
-        <owl:inverseOf rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#relatedMaintenanceProcess"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#isRelatedMaintenanceProcessOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/bm2o#relatedMaintenanceProcess"/>
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess"/>
         <rdfs:range rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"/>
+        <rdfs:comment xml:lang="en">Links a maintenance process to its description.</rdfs:comment>
+        <rdfs:label xml:lang="en">is related maintenance process of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceLevelAgreementOf -->
+    <!-- https://w3id.org/def/bm2o#isRelatedServiceLevelAgreementOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceLevelAgreementOf">
-        <owl:inverseOf rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceLevelAgreement"/>
-        <rdfs:domain rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#isRelatedServiceLevelAgreementOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/bm2o#relatedServiceLevelAgreement"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/bm2o#ServiceLevelAgreement"/>
         <rdfs:range rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Agreement"/>
+        <rdfs:comment xml:lang="en">Links a service level agreement to the agreement it is related to.</rdfs:comment>
+        <rdfs:label xml:lang="en">is related service level agreement of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceProviderOf -->
+    <!-- https://w3id.org/def/bm2o#isRelatedServiceProviderOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#isRelatedServiceProviderOf">
-        <owl:inverseOf rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceProvider"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#isRelatedServiceProviderOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/bm2o#relatedServiceProvider"/>
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
         <rdfs:range rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Agreement"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">is related service provider of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#isRequiredFunctionOf -->
+    <!-- https://w3id.org/def/bm2o#isRequiredFunctionOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#isRequiredFunctionOf">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#isRequiredFunctionOf">
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/RequiredFunction"/>
         <rdfs:range rdf:resource="https://brickschema.org/schema/1.1/Brick#Equipment"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">is required function of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#participatesTo -->
+    <!-- https://w3id.org/def/bm2o#participatesTo -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#participatesTo">
-        <owl:inverseOf rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#relatedEquipment"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#participatesTo">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/bm2o#relatedEquipment"/>
         <rdfs:domain rdf:resource="https://brickschema.org/schema/1.1/Brick#Equipment"/>
         <rdfs:range rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">participates to</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#relatedAgreement -->
+    <!-- https://w3id.org/def/bm2o#relatedAgreement -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#relatedAgreement">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#relatedAgreement">
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"/>
         <rdfs:range rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Agreement"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">related agreement</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#relatedCommercialService -->
+    <!-- https://w3id.org/def/bm2o#relatedCommercialService -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#relatedCommercialService">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#relatedCommercialService">
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Agreement"/>
         <rdfs:range rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/CommercialService"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">related commercial service</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#relatedCustomer -->
+    <!-- https://w3id.org/def/bm2o#relatedCustomer -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#relatedCustomer">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#relatedCustomer">
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Agreement"/>
         <rdfs:range rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Customer"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">related customer</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#relatedEquipment -->
+    <!-- https://w3id.org/def/bm2o#relatedEquipment -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#relatedEquipment">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#relatedEquipment">
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess"/>
         <rdfs:range rdf:resource="https://brickschema.org/schema/1.1/Brick#Equipment"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">related equipment</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#relatedMaintenanceProcess -->
+    <!-- https://w3id.org/def/bm2o#relatedMaintenanceProcess -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#relatedMaintenanceProcess">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#relatedMaintenanceProcess">
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"/>
         <rdfs:range rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceProcess"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">related maintenance process</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceLevelAgreement -->
+    <!-- https://w3id.org/def/bm2o#relatedServiceLevelAgreement -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceLevelAgreement">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#relatedServiceLevelAgreement">
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Agreement"/>
-        <rdfs:range rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/bm2o#ServiceLevelAgreement"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">related service level agreement</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceProvider -->
+    <!-- https://w3id.org/def/bm2o#relatedServiceProvider -->
 
 
-    <owl:ObjectProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#relatedServiceProvider">
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/bm2o#relatedServiceProvider">
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Agreement"/>
         <rdfs:range rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">related service provider</rdfs:label>
     </owl:ObjectProperty>
-    
-
-
-    <!-- https://brickschema.org/schema/1.1/Brick#hasLocation -->
-
-
-    <rdf:Description rdf:about="https://brickschema.org/schema/1.1/Brick#hasLocation">
-        <rdfs:domain rdf:resource="https://brickschema.org/schema/1.1/Brick#Equipment"/>
-    </rdf:Description>
-    
-
-
-    <!-- https://brickschema.org/schema/1.1/Brick#isLocationOf -->
-
-
-    <rdf:Description rdf:about="https://brickschema.org/schema/1.1/Brick#isLocationOf">
-        <rdfs:range rdf:resource="https://brickschema.org/schema/1.1/Brick#Equipment"/>
-    </rdf:Description>
     
 
 
@@ -253,143 +307,171 @@
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#criticalLevel -->
+    <!-- https://w3id.org/def/bm2o#criticalLevel -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#criticalLevel">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/bm2o#criticalLevel">
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The critical level of the maintenance process.</rdfs:comment>
+        <rdfs:label xml:lang="en">critical level</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#customerCode -->
+    <!-- https://w3id.org/def/bm2o#customerCode -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#customerCode">
-        <rdfs:domain rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/bm2o#customerCode">
+        <rdfs:domain rdf:resource="https://w3id.org/def/bm2o#ServiceLevelAgreement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The customer code of the service level agreement.</rdfs:comment>
+        <rdfs:label xml:lang="en">customer code</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#description -->
+    <!-- https://w3id.org/def/bm2o#description -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#description">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/bm2o#description">
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The description of the maintenance process.</rdfs:comment>
+        <rdfs:label xml:lang="en">description</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDuration -->
+    <!-- https://w3id.org/def/bm2o#estimatedInterventionDuration -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDuration">
-        <rdfs:domain rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/bm2o#estimatedInterventionDuration">
+        <rdfs:domain rdf:resource="https://w3id.org/def/bm2o#ServiceLevelAgreement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">The estimated time to intervention of any maintenance process covered by the service level agreement.</rdfs:comment>
+        <rdfs:label xml:lang="en">estimated intervention duration</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDurationUnit -->
+    <!-- https://w3id.org/def/bm2o#estimatedInterventionDurationUnit -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#estimatedInterventionDurationUnit">
-        <rdfs:domain rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/bm2o#estimatedInterventionDurationUnit">
+        <rdfs:domain rdf:resource="https://w3id.org/def/bm2o#ServiceLevelAgreement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The unit in which is defined the estimated intervention duration (a double) of any maintenance process covered by the service level agreement.</rdfs:comment>
+        <rdfs:label xml:lang="en">estimated intervention duration unit</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#label -->
+    <!-- https://w3id.org/def/bm2o#label -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#label">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/bm2o#label">
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Customer"/>
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The label of the service provider.</rdfs:comment>
+        <rdfs:label xml:lang="en">label</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToIntervention -->
+    <!-- https://w3id.org/def/bm2o#maxTimeToIntervention -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToIntervention">
-        <rdfs:domain rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/bm2o#maxTimeToIntervention">
+        <rdfs:domain rdf:resource="https://w3id.org/def/bm2o#ServiceLevelAgreement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">The maximum time to intervention of any maintenance process covered by the service level agreement.</rdfs:comment>
+        <rdfs:label xml:lang="en">max time to intervention</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToInterventionUnit -->
+    <!-- https://w3id.org/def/bm2o#maxTimeToInterventionUnit -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToInterventionUnit">
-        <rdfs:domain rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/bm2o#maxTimeToInterventionUnit">
+        <rdfs:domain rdf:resource="https://w3id.org/def/bm2o#ServiceLevelAgreement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The unit in which is defined the maximum time to intervention (a double) of any maintenance process covered by the service level agreement.</rdfs:comment>
+        <rdfs:label xml:lang="en">max time to intervention unit</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecovery -->
+    <!-- https://w3id.org/def/bm2o#maxTimeToRecovery -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecovery">
-        <rdfs:domain rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/bm2o#maxTimeToRecovery">
+        <rdfs:domain rdf:resource="https://w3id.org/def/bm2o#ServiceLevelAgreement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">The maximum time to recovery of any maintenance process covered by the service level agreement.</rdfs:comment>
+        <rdfs:label xml:lang="en">max time to recovery</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecoveryUnit -->
+    <!-- https://w3id.org/def/bm2o#maxTimeToRecoveryUnit -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#maxTimeToRecoveryUnit">
-        <rdfs:domain rdf:resource="http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/bm2o#maxTimeToRecoveryUnit">
+        <rdfs:domain rdf:resource="https://w3id.org/def/bm2o#ServiceLevelAgreement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The unit in which is defined the maximum time to recovery (a double) of any maintenance process covered by the service level agreement.</rdfs:comment>
+        <rdfs:label xml:lang="en">max time to recovery unit</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#serviceProviderCode -->
+    <!-- https://w3id.org/def/bm2o#serviceProviderCode -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#serviceProviderCode">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/bm2o#serviceProviderCode">
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The service provider code of a maintenance process.</rdfs:comment>
+        <rdfs:label xml:lang="en">service provider code</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#technicalReason -->
+    <!-- https://w3id.org/def/bm2o#technicalReason -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#technicalReason">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/bm2o#technicalReason">
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The technical reason of a maintenance process.</rdfs:comment>
+        <rdfs:label xml:lang="en">technical reason</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#topic -->
+    <!-- https://w3id.org/def/bm2o#topic -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#topic">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/bm2o#topic">
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The topic of a maintenance process.</rdfs:comment>
+        <rdfs:label xml:lang="en">topic</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#workType -->
+    <!-- https://w3id.org/def/bm2o#workType -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#workType">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/bm2o#workType">
         <rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceWorkOrderRecord"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The type of work needed for a maintenance process.</rdfs:comment>
+        <rdfs:label xml:lang="en">work type</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -406,152 +488,186 @@
     
 
 
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#Address -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#Address"/>
-    
-
-
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#Adjust -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#Adjust">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#Collectivity -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#Collectivity">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Customer"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#ElevatorServiceProvider -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#ElevatorServiceProvider">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#HeatingServiceProvider -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#HeatingServiceProvider">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#Inspect -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#Inspect">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#LandscapingServiceProvider -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#LandscapingServiceProvider">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#MultiserviceProvider -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#MultiserviceProvider">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#PaintingServiceProvider -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#PaintingServiceProvider">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#PlumbingServiceProvider -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#PlumbingServiceProvider">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#PropertyManager -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#PropertyManager">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Customer"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#Repair -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#Repair">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#Replace -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#Replace">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#ServiceLevelAgreement"/>
-    
-
-
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#Tertiary -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#Tertiary">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Customer"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.buildingmaintenancedata.org/onto/bm2o#VentillationServiceProvider -->
-
-
-    <owl:Class rdf:about="http://www.buildingmaintenancedata.org/onto/bm2o#VentillationServiceProvider">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
-    </owl:Class>
-    
-
-
     <!-- https://brickschema.org/schema/1.1/Brick#Equipment -->
 
 
     <rdf:Description rdf:about="https://brickschema.org/schema/1.1/Brick#Equipment">
         <owl:equivalentClass rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MaintainableMaterialItem"/>
     </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#Address -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#Address">
+        <rdfs:comment xml:lang="en">Descriptin of a physical address</rdfs:comment>
+        <rdfs:label xml:lang="en">Address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#Adjust -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#Adjust">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity"/>
+        <rdfs:comment xml:lang="en">Maintenance activity that consists in setting a variable control mechanism to the correct specification to retain or restore the function of a maintainable item.</rdfs:comment>
+        <rdfs:label xml:lang="en">Adjust</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#Collectivity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#Collectivity">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Customer"/>
+        <rdfs:comment xml:lang="en">Organization of legal organizations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Collectivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#ElevatorServiceProvider -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#ElevatorServiceProvider">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
+        <rdfs:comment xml:lang="en">Person or organization which provides services related to elevators.</rdfs:comment>
+        <rdfs:label xml:lang="en">Elevator Service Provider</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#HeatingServiceProvider -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#HeatingServiceProvider">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
+        <rdfs:comment xml:lang="en">Person or organization which provides services related to heating.</rdfs:comment>
+        <rdfs:label xml:lang="en">Heating Service Provider</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#Inspect -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#Inspect">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity"/>
+        <rdfs:comment xml:lang="en">Maintenance activity that consists in inspecting some component of a maintainable item to retain its function.</rdfs:comment>
+        <rdfs:label xml:lang="en">Inspect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#LandscapingServiceProvider -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#LandscapingServiceProvider">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
+        <rdfs:comment xml:lang="en">Person or organization which provides services related to landscaping.</rdfs:comment>
+        <rdfs:label xml:lang="en">Landscaping Service Provider</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#MultiserviceProvider -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#MultiserviceProvider">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
+        <rdfs:comment xml:lang="en">Person or organization which provides multiple building-related services.</rdfs:comment>
+        <rdfs:label xml:lang="en">Multiservice Provider</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#PaintingServiceProvider -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#PaintingServiceProvider">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
+        <rdfs:comment xml:lang="en">Person or organization which provides services related to painting.</rdfs:comment>
+        <rdfs:label xml:lang="en">Painting Service Provider</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#PlumbingServiceProvider -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#PlumbingServiceProvider">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
+        <rdfs:comment xml:lang="en">Person or organization which provides services related to plumbing.</rdfs:comment>
+        <rdfs:label xml:lang="en">Plumbing Service Provider</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#PropertyManager -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#PropertyManager">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Customer"/>
+        <rdfs:comment xml:lang="en">Person or organization hired to oversee the day-to-day operations of a unit of real estate.</rdfs:comment>
+        <rdfs:label xml:lang="en">Property Manager</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#Repair -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#Repair">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity"/>
+        <rdfs:comment xml:lang="en">Maintenance activity that consists in repairing some component of a maintainable item to retain or restore its function.</rdfs:comment>
+        <rdfs:label xml:lang="en">Repair</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#Replace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#Replace">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/maintenance/MaintenanceReferenceOntology/MaintenanceActivity"/>
+        <rdfs:comment xml:lang="en">Maintenance activity that consists in replacing some component of a maintainable item to retain or restore its function.</rdfs:comment>
+        <rdfs:label xml:lang="en">Replace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#ServiceLevelAgreement -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#ServiceLevelAgreement">
+        <rdfs:comment xml:lang="en">Contract between a service provider and its customers that documents what services the provider will furnish and defines the service standards the provider is obligated to meet.</rdfs:comment>
+        <rdfs:label xml:lang="en">Service Level Agreement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#Tertiary -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#Tertiary">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Customer"/>
+        <rdfs:comment xml:lang="en">Tertiary industries or companies are involved in providing services, rather than the production of raw materials or manufacturing. (Source: ldoce)</rdfs:comment>
+        <rdfs:label xml:lang="en">Tertiary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/bm2o#VentilationServiceProvider -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/bm2o#VentilationServiceProvider">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ServiceProvider"/>
+        <rdfs:comment xml:lang="en">Person or organization which provides services related to ventilation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ventilation Service Provider</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 
